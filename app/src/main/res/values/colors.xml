@@ -11,6 +11,7 @@
     <color name="colorYellow">#FFFF00</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDrawer">#2196F3</color>
+    <color name="colorGray">#E0E0E0</color>
 </resources>
 
 

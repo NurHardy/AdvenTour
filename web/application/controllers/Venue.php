@@ -44,5 +44,25 @@
 				$this->response(NULL, 404);
 			}
 		}
+		
+		function goAdventour_get()
+		{				
+			if((!$this->get('category')) &&  (!$this->get('budget')))
+			{
+				$this->response(NULL, 400);
+			}
+		
+			$venues = $this->mVenue->getGoAdventour(1, $this->get('category'), $this->get('budget'));
+			
+			if($venues)
+			{
+				$this->response($venues, 200); // 200 being the HTTP response code
+			}
+	 
+			else
+			{
+				$this->response(NULL, 404);
+			}
+		}
 }
 ?>

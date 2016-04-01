@@ -33,6 +33,7 @@
     <color name="colorAccent">#8BC34A</color>
     <color name="colorDivider">#B6B6B6</color>
     <color name="colorDrawer">#2196F3</color>
+    <color name="colorGray">#E0E0E0</color>
     <color name="colorIcons">#FFFFFF</color>
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#388E3C</color>

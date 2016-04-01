@@ -2,5 +2,9 @@
     {
         "merged": "D:\\TempProg\\Android_Studio_project\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "D:\\TempProg\\Android_Studio_project\\AdvenTour\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\xampp\\htdocs\\AdvenTour\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

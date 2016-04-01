@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\xampp\\htdocs\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
-        "source": "C:\\xampp\\htdocs\\AdvenTour\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
-    },
-    {
         "merged": "D:\\TempProg\\Android_Studio_project\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "D:\\TempProg\\Android_Studio_project\\AdvenTour\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "C:\\xampp\\htdocs\\AdvenTour\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "C:\\Users\\yasir\\AndroidStudioProjects\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\yasir\\AndroidStudioProjects\\AdvenTour\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasir\\AndroidStudioProjects\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\yasir\\AndroidStudioProjects\\AdvenTour\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     },
     {
         "merged": "D:\\TempProg\\Android_Studio_project\\AdvenTour\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",

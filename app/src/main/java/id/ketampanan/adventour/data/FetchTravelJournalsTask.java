@@ -52,6 +52,7 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
         final String A_TJ_DATE_RETURN = "date_return";
         final String A_TJ_DATE_CREATED = "date_created";
         final String A_TJ_TOTAL_BUDGET = "total_budget";
+        final String A_TJ_FIRST_PAGE = "link_gambar";
 
             /*JSONObject travelJournalsJson = new JSONObject(travelJournalsJsonStr);
             //JSONArray travelJournalsArray = travelJournalsJson.getJSONArray();
@@ -72,7 +73,7 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
             String date_return;
             String date_created;
             String total_budget;
-            String first_page = "";
+            String first_page;
 
             // Get the JSON object representing the day
             JSONObject travelJournalsItem = travelJournalsArray.getJSONObject(i);
@@ -86,6 +87,7 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
             date_return = travelJournalsItem.getString(A_TJ_DATE_RETURN);
             date_created = travelJournalsItem.getString(A_TJ_DATE_CREATED);
             total_budget = travelJournalsItem.getString(A_TJ_TOTAL_BUDGET);
+            first_page = travelJournalsItem.getString(A_TJ_FIRST_PAGE);
 
             resultStrs[i] = id_traveljournal + splitter +
                     user + splitter +
@@ -95,7 +97,8 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
                     destination + splitter +
                     date_return + splitter +
                     date_created + splitter +
-                    total_budget;
+                    total_budget + splitter +
+                    first_page;
 
             // Create a new map of values, where column names are the keys
             ContentValues values = new ContentValues();
@@ -103,7 +106,9 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_USER, user);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_ID_LAYOUT, id_layout);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_ORIGN, orign);
+            values.put(AdventourContract.TravelJournal.COLUMN_NAME_DATE_ORIGN, date_orign);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_DESTINATION, destination);
+            values.put(AdventourContract.TravelJournal.COLUMN_NAME_DATE_RETURN, date_return);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_DATE_CREATED, date_created);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_TOTAL_BUDGET, total_budget);
             values.put(AdventourContract.TravelJournal.COLUMN_NAME_FIRST_PAGE, first_page);
@@ -140,7 +145,7 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
         String travelJournalJsonStr = null;
 
         try {
-            final String REST_URL =  "http://192.168.1.9/adventourrestserver/index.php/traveljournal_rest/traveljournals";
+            final String REST_URL =  "http://192.168.1.13/adventourrestserver/index.php/traveljournal_rest/traveljournals";
 
             Uri builtUri = Uri.parse(REST_URL).buildUpon().build();
 

@@ -23,7 +23,9 @@ public final class AdventourContract {
         public static final String COLUMN_NAME_USER = "user";
         public static final String COLUMN_NAME_ID_LAYOUT = "id_layout";
         public static final String COLUMN_NAME_ORIGN = "orign";
+        public static final String COLUMN_NAME_DATE_ORIGN = "date_orign";
         public static final String COLUMN_NAME_DESTINATION = "destination";
+        public static final String COLUMN_NAME_DATE_RETURN = "date_return";
         public static final String COLUMN_NAME_DATE_CREATED = "date_created";
         public static final String COLUMN_NAME_TOTAL_BUDGET = "budget";
         public static final String COLUMN_NAME_FIRST_PAGE = "first_page";

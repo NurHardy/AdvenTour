@@ -37,7 +37,9 @@ public class AdventourDbHelper extends SQLiteOpenHelper {
                     TravelJournal.COLUMN_NAME_USER + TEXT_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_ID_LAYOUT + NUMBER_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_ORIGN + TEXT_TYPE + COMMA_SEP +
+                    TravelJournal.COLUMN_NAME_DATE_ORIGN + TEXT_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_DESTINATION + TEXT_TYPE + COMMA_SEP +
+                    TravelJournal.COLUMN_NAME_DATE_RETURN + TEXT_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_DATE_CREATED + TEXT_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_TOTAL_BUDGET + NUMBER_TYPE + COMMA_SEP +
                     TravelJournal.COLUMN_NAME_FIRST_PAGE + TEXT_TYPE +
@@ -186,7 +188,7 @@ public class AdventourDbHelper extends SQLiteOpenHelper {
                 values);
     }
 
-    public void readTravelJournals(){
+    public Cursor readTravelJournals(){
         SQLiteDatabase dbr = this.getReadableDatabase();
 
         // Define a projection that specifies which columns from the database
@@ -197,7 +199,9 @@ public class AdventourDbHelper extends SQLiteOpenHelper {
                 TravelJournal.COLUMN_NAME_USER,
                 TravelJournal.COLUMN_NAME_ID_LAYOUT,
                 TravelJournal.COLUMN_NAME_ORIGN,
+                TravelJournal.COLUMN_NAME_DATE_ORIGN,
                 TravelJournal.COLUMN_NAME_DESTINATION,
+                TravelJournal.COLUMN_NAME_DATE_RETURN,
                 TravelJournal.COLUMN_NAME_DATE_CREATED,
                 TravelJournal.COLUMN_NAME_TOTAL_BUDGET,
                 TravelJournal.COLUMN_NAME_FIRST_PAGE,
@@ -216,18 +220,22 @@ public class AdventourDbHelper extends SQLiteOpenHelper {
                 null                                 // The sort order
         );
 
-        cursor.moveToFirst();
+        /*cursor.moveToFirst();
 
         while (!cursor.isAfterLast()) {
             long itemId = cursor.getLong(cursor.getColumnIndexOrThrow(TravelJournal._ID));
             long itemIdTravelJornal = cursor.getLong(cursor.getColumnIndexOrThrow(TravelJournal.COLUMN_NAME_ID_TRAVELJOURNAL));
+            String itemPicLink = cursor.getString(cursor.getColumnIndexOrThrow(TravelJournal.COLUMN_NAME_FIRST_PAGE));
             String itemOrign = cursor.getString(cursor.getColumnIndexOrThrow(TravelJournal.COLUMN_NAME_ORIGN));
 
             Log.v("DbRead", "Id:" + itemId);
             Log.v("DbRead", "IdTravelJournal:" + itemIdTravelJornal);
+            Log.v("DbRead", "LinkGambar:" + itemPicLink);
             Log.v("DbRead", "Orign:" + itemOrign);
 
             cursor.moveToNext();
-        }
+        }*/
+
+        return cursor;
     }
 }

@@ -1,15 +1,39 @@
 package id.ketampanan.adventour;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Calendar;
+
+import id.ketampanan.adventour.data.AdventourDbHelper;
+import id.ketampanan.adventour.data.AdventourContract.TravelJournal;
+import id.ketampanan.adventour.data.TravelJournalsAdapter;
+
+/**
+ * Class: MainActivity
+ * Responsibility: Activity utama untuk travel journal
+ *                  Berisi viewPager untuk menampilkan tiap tab
+ */
+
 public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
     }
 
     @Override
@@ -49,4 +76,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Method: setupViewPager
+     * Fungsi: membuat tab
+     * @param viewPager
+     */
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new MainActivityFragment(), "My Journals");
+        adapter.addFragment(new MainActivityFragment(), "Browse");
+        adapter.addFragment(new MainActivityFragment(), "Search");
+        viewPager.setAdapter(adapter);
+    }
+
 }

@@ -19,6 +19,11 @@ import id.ketampanan.adventour.data.AdventourContract.TravelJournal;
 
 import id.ketampanan.adventour.R;
 
+/**
+ * Class: TravelJournalsAdapter
+ * Responsibility: Meletakkan tiap travel journal ke view-nya.
+ */
+
 public class TravelJournalsAdapter extends CursorRecyclerViewAdapter<TravelJournalsAdapter.ViewHolder> {
 
     private Context mContext;
@@ -29,6 +34,10 @@ public class TravelJournalsAdapter extends CursorRecyclerViewAdapter<TravelJourn
         this.mContext = context;
     }
 
+    /**
+     * Class: ViewHolder
+     * Responsibility: Memudahkan akses ke tiap elemen view
+     */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageFirstPage;
         public TextView textTotalBudget;
@@ -54,6 +63,13 @@ public class TravelJournalsAdapter extends CursorRecyclerViewAdapter<TravelJourn
         return vh;
     }
 
+    /**
+     * Method: onBindViewHolder
+     * Fungsi: meletakkan data dari cursor ke view yang terkait
+     *          Image di-load menggunakan Glide
+     * @param viewHolder
+     * @param cursor
+     */
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, Cursor cursor) {
 
@@ -62,7 +78,7 @@ public class TravelJournalsAdapter extends CursorRecyclerViewAdapter<TravelJourn
         Glide
                 .with(this.mContext)
                 .load(R.drawable.placeholder)
-                .centerCrop()
+                .fitCenter()
                 //.placeholder(R.drawable.loading_spinner)
                 .crossFade()
                 .into(viewHolder.imageFirstPage);

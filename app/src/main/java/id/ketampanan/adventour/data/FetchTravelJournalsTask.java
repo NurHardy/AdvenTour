@@ -34,7 +34,8 @@ public class FetchTravelJournalsTask extends AsyncTask<String, Void, String[]> {
 
     /**
      * Method: getTravelJournalsDataFromJson
-     * Fungsi: mengekstrak value dari Json yang diunduh
+     * Fungsi: mengekstrak value dari Json yang diunduh dan
+     *          memasukkannya ke dalam database lokal
      * @param travelJournalsJsonStr
      * @return resultStrs: String[]
      * @throws JSONException

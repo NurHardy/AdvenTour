@@ -1,9 +1,5 @@
 package id.ketampanan.adventour.data;
 
-/**
- * Created by aadddrr on 17/06/2016 for AdvenTour.
- */
-
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
 
@@ -31,6 +27,13 @@ import android.support.v7.widget.RecyclerView;
 
 /**
  * Created by skyfishjy on 10/31/14.
+ */
+
+/**
+ * Class: CursorRecyclerViewAdapter (Abstract)
+ * Responsibility: Kelas abstract adapter cursor untuk recyclerview
+ *                  Digunakan karena tidak tersedia bawaan dari Android
+ * @param <VH>
  */
 
 public abstract class CursorRecyclerViewAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
